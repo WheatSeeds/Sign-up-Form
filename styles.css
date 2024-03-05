@@ -1,0 +1,31 @@
+html, button, input{
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    max-width: 100%;
+    outline: none;
+}
+form{
+    width: min-content;
+    display: grid;
+    grid-template:  5vh 5vh / 15vw 15vw;
+    grid-auto-rows: 5vh;
+    column-gap: 3vw;
+    row-gap: 2vh;
+}
+input{
+    border: none;
+    outline: none;
+    border-bottom: .1em solid #a1a1a1;
+}
