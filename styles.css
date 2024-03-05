@@ -1,14 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 html, button, input{
     font-family: 'Source Sans Pro', Helvetica, sans-serif;
 }
 body{
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
+    background: url("Img/photo.jpg") no-repeat;
+    background-size: cover;
 }
 button, input, select, textarea {
     font-size: 100%;
@@ -16,11 +15,22 @@ button, input, select, textarea {
     max-width: 100%;
     outline: none;
 }
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 35vw;
+    height: 100vh;
+    margin-left: 5vw;
+
+}
+
 form{
     width: min-content;
     display: grid;
-    grid-template:  5vh 5vh / 15vw 15vw;
-    grid-auto-rows: 5vh;
+    grid-template:  8vh / 25vw;
+    grid-auto-rows: 8vh;
     column-gap: 3vw;
     row-gap: 2vh;
 }
