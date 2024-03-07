@@ -11,12 +11,13 @@
         <p>Sign-up account</p>
         <input type="text" id="name" placeholder="Name" required>
         <input type="email" id="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" minlength="7" required>
-        <input type="password" placeholder="Confirm password" required>
+        <input type="password" id="pass-1" placeholder="Password" minlength="7" required>
+        <input type="password" id="pass-2" placeholder="Confirm password" required>
+        <div class="error"></div>
         <button type="submit">Create account</button>
         <span>Already have an account? <a href="#">Log In</a></span>
     </form>
 </div>
-
+<script src="check-password.js"></script>
 </body>
 </html>
