@@ -6,15 +6,30 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<header>
+</header>
 <div id="content">
+    <h1>Guitar Chords</h1>
     <form action="#" method="post">
+
         <p>Sign-up account</p>
-        <input type="text" id="name" placeholder="Name" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="password" id="pass-1" placeholder="Password" minlength="7" required>
-        <input type="password" id="pass-2" placeholder="Confirm password" required>
-        <div class="error"></div>
-        <button type="submit">Create account</button>
+        <div class="form-div">
+            <input type="text" id="name" placeholder="Name" required>
+            <div class="error">*Please enter your name</div>
+        </div>
+        <div class="form-div">
+            <input type="email" id="email" placeholder="Email" required>
+            <div class="error">*Please enter a valid Email.</div>
+        </div>
+        <div class="form-div">
+            <input type="password" id="pass-1" placeholder="Password" minlength="7" required>
+            <div class="error">*Password must be at least 7 characters long</div>
+        </div>
+        <div class="form-div">
+            <input type="password" id="pass-2" placeholder="Confirm password" required>
+            <div class="error-password-confirm"></div>
+        </div>
+        <button type="submit" id="submit">Create account</button>
         <span>Already have an account? <a href="#">Log In</a></span>
     </form>
 </div>

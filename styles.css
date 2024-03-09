@@ -1,13 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+:root{
+    --color-invalid: #d75661;
+    --color-valid: #79d756;
+    --color-pasive: #a1a1a1;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
 html, button, input{
     font-family: 'Inter','Source Sans Pro', Helvetica, sans-serif;
+    color: #777777;
 }
 body{
+    height: 100vh;
     margin: 0;
     padding: 0;
-    background: url("Img/photo.jpg") no-repeat;
+    background: url("Img/background.jpg") no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 button, input, select, textarea {
     font-size: 100%;
@@ -18,37 +31,35 @@ button, input, select, textarea {
 
 #content{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    width: 35vw;
+    background: rgba(255,255,255, 0.8);
+    width: 60svh;
     height: 100vh;
-    margin-left: 5vw;
 }
 
 form{
     width: min-content;
-    display: grid;
-    grid-template:  8vh / 25vw;
-    grid-auto-rows: 8vh;
-    column-gap: 3vw;
-    row-gap: 2vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 2vh;
+    align-items: center;
 }
-
+.form-div{
+    height: 10vh;
+    width: 15vw;
+}
 button{
     border: 0;
-    border-bottom: .1em solid #a1a1a1;
-    background-image:
-            linear-gradient(to top, #a1a1a1 50%, transparent 50%);
-    background-size: 100% 200%;
-    background-position: top;
-    transition: 0.3s;
+    color: #e0e0e0;
+    cursor: pointer;
+    width: 60svh;
+    height: 50px;
+    background: rgba(0,0,0,0.5);
+    margin-bottom: 3vh;
 }
-button:hover{
-    background-position: bottom;
-}
+
 form + span{
     display: flex;
     justify-content: center;
@@ -56,14 +67,22 @@ form + span{
 input{
     border: none;
     outline: none;
-    border-bottom: .1em solid #a1a1a1;
+    background: rgba(0,0,0,0);
+    border-bottom: .1em solid var(--color-pasive);
     transition: 0.3s;
 }
 
 input:focus:valid, input:valid{
-    border-bottom: .1em solid #79d756;
+    border-bottom: .1em solid var(--color-valid);
 }
 
 input:focus:invalid{
-    border-bottom: .1em solid #d75661;
+    border-bottom: .1em solid var(--color-invalid);
+}
+.error{
+    display: none;
+}
+input:focus:invalid ~ .error{
+    display: block;
+    color: var(--color-invalid);
 }
