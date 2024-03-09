@@ -1,17 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 :root{
     --color-invalid: #d75661;
     --color-valid: #79d756;
     --color-pasive: #a1a1a1;
 }
-a{
-    text-decoration: none;
-    color: black;
+
+p{
+    height: 40px;
 }
+
 html, button, input{
     font-family: 'Inter','Source Sans Pro', Helvetica, sans-serif;
     color: #777777;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
 body{
     height: 100vh;
     margin: 0;
@@ -22,12 +30,6 @@ body{
     align-items: center;
     justify-content: center;
 }
-button, input, select, textarea {
-    font-size: 100%;
-    margin: 0;
-    max-width: 100%;
-    outline: none;
-}
 
 #content{
     display: flex;
@@ -35,35 +37,38 @@ button, input, select, textarea {
     justify-content: center;
     align-items: center;
     background: rgba(255,255,255, 0.8);
-    width: 60svh;
+    width: 380px;
     height: 100vh;
 }
-
 form{
-    width: min-content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 380px;
 }
+
 .form-div{
-    height: 10vh;
-    width: 15vw;
+    width: 200px;
+    height: 70px;
 }
+
+button, input{
+    font-size: 100%;
+    margin: 0;
+    max-width: 100%;
+    outline: none;
+}
+
 button{
     border: 0;
     color: #e0e0e0;
     cursor: pointer;
-    width: 60svh;
-    height: 50px;
     background: rgba(0,0,0,0.5);
-    margin-bottom: 3vh;
+    width: 380px;
+    height: 50px;
+    margin-bottom: 25px;
 }
 
-form + span{
-    display: flex;
-    justify-content: center;
-}
 input{
     border: none;
     outline: none;
@@ -85,4 +90,27 @@ input:focus:invalid{
 input:focus:invalid ~ .error{
     display: block;
     color: var(--color-invalid);
+}
+
+
+@media only screen and (max-width: 600px){
+    p{
+        height: 40px;
+    }
+    #content{
+        width: 380px;
+        height: 100vh;
+    }
+    form{
+        width: 380px;
+    }
+    .form-div{
+        width: 200px;
+        height: 70px;
+    }
+    button{
+        width: 380px;
+        height: 50px;
+        margin-bottom: 25px;
+    }
 }
